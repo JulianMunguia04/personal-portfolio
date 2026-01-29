@@ -1,21 +1,18 @@
 <script setup>
   import { useRoute } from 'vue-router'
+  import Navbar from './components/Navbar.vue'
 
   const route = useRoute()
 </script>
 
 <template>
-  <nav v-if="route.path == '/'">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/projects">Projects</router-link> |
-    <router-link to="/contact">Contact</router-link>
-  </nav>
+  <Navbar/>
 
   <router-view />
-  <div>Test Root</div>
 </template>
 
 <style scoped>
-
+  div{
+    height: 200vh;
+  }
 </style>
