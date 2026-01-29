@@ -28,6 +28,13 @@
         Experience
       </div>
     </router-link>
+    <router-link class="router-link" to="/credentials">
+      <i class="pi pi-id-card nav-icons"></i>
+
+      <div class="hint-box">
+        Credentials
+      </div>
+    </router-link>
     <router-link class="router-link" to="/contact">
       <i class="pi pi-send nav-icons"></i>
 
