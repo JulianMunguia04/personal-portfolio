@@ -8,3 +8,6 @@
 <script setup>
 // Nothing yet
 </script>
+
+<style scoped>
+</style>
