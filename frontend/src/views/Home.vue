@@ -1,11 +1,7 @@
-<template>
-  <main :class="{ show: loaded }">
-    Welcome
-  </main>
-</template>
-
 <script setup>
   import { ref, onMounted } from 'vue'
+  import HomeCard from '@/components/HomeCard.vue'
+  import Raindrop from '@/components/Raindrop.vue'
 
   const loaded = ref(false)
   const showWaitTime = 1400
@@ -16,6 +12,13 @@
     }, showWaitTime)
   })
 </script>
+
+<template>
+  <main :class="{ show: loaded }">
+    <HomeCard/>
+    
+  </main>
+</template>
 
 <style scoped>
   main{
