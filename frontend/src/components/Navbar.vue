@@ -85,6 +85,7 @@ nav {
   opacity: 0;
   transition: all 0.6s ease;
   margin-top: 1vh;
+  z-index: 50;
 }
 
 .show {
@@ -93,7 +94,7 @@ nav {
 }
 
 .nav-margin {
-  margin-top: 8vh;
+  margin-top: 12vh;
 }
 
 .router-link {
