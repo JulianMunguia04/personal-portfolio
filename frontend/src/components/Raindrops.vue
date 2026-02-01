@@ -133,7 +133,7 @@
         // Drawn with **fixed peaks**, no random change per frame
         function drawMountains() {
         const layers = [
-            { color: "#111111", peaks: [ {x:0,y:canvas.height}, {x:430,y:canvas.height*0.4}, {x:1000,y:canvas.height} ] },
+            { color: "#111111", peaks: [ {x:0,y:canvas.height}, {x:430,y:canvas.height*0.4}, {x:1000``,y:canvas.height} ] },
             { color: "#333333", peaks: [ {x:0,y:canvas.height}, {x:250,y:canvas.height*0.45}, {x:500,y:canvas.height} ] },
             { color: "#555555", peaks: [ {x:0,y:canvas.height}, {x:200,y:canvas.height*0.5}, {x:400,y:canvas.height}, {x:600,y:canvas.height*0.52}, {x:800,y:canvas.height} ] },
             { color: "#777777", peaks: [ {x:0,y:canvas.height}, {x:150,y:canvas.height*0.55}, {x:400,y:canvas.height}, {x:650,y:canvas.height*0.57}, {x:900,y:canvas.height} ] },
