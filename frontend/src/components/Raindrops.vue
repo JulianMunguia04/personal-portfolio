@@ -1,5 +1,4 @@
 <script setup>
-    import { ref, onMounted } from 'vue'
 
     onMounted(() => {
         const canvas = document.getElementById("rainCanvas");
@@ -193,15 +192,99 @@
         });
     })
 
+    import { ref, onMounted } from 'vue'
+    import 'primeicons/primeicons.css'
+
+    const githubLink = ref(null)
+    const linkedinLink = ref(null)
+
+    onMounted(() => {
+    // Fade in GitHub first, then LinkedIn
+    if (githubLink.value && linkedinLink.value) {
+        setTimeout(() => {
+        githubLink.value.classList.add('show')
+        }, 1500)
+        setTimeout(() => {
+        linkedinLink.value.classList.add('show')
+        }, 1750)
+    }
+    })
+
 </script> 
 
 <template>
+  <div class="canvas-wrapper">
     <canvas id="rainCanvas"></canvas>
+
+    <!-- Social Links -->
+    <a
+      href="https://github.com/JulianMunguia04"
+      target="_blank"
+      class="social-link github"
+      ref="githubLink"
+    >
+      <i class="pi pi-github"></i>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/julian-munguia/"
+      target="_blank"
+      class="social-link linkedin"
+      ref="linkedinLink"
+    >
+      <i class="pi pi-linkedin"></i>
+    </a>
+  </div>
 </template>
 
 <style scoped>
-    canvas{
-        border: 1px solid rgb(204, 204, 204);
-        border-radius: 5vh;
+    .canvas-wrapper {
+    position: relative;
+    display: inline-block;
+    }
+
+    canvas {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5vh;
+    display: block;
+    }
+
+    /* Social links */
+    .social-link {
+    position: absolute;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #00b050;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 3;
+    }
+
+    /* Individual positions */
+    .social-link.github {
+    right: 1rem;
+    }
+
+    .social-link.linkedin {
+    right: 4rem;
+    }
+
+    /* Fade-in */
+    .social-link.show {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    /* Hover animation */
+    .social-link:hover {
+    transform: translateY(-5px) scale(1.2);
+    opacity: 0.85;
     }
 </style>
