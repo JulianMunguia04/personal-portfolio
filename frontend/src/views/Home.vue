@@ -1,8 +1,12 @@
 <template>
-  <div ref="homeSection" class="home" :class="{ show: isVisible }">
+  <!-- HERO SECTION -->
+  <div
+    ref="homeSection"
+    class="home"
+    :class="{ show: showHome }"
+  >
     <Raindrops />
 
-    <!-- TEXT OVERLAY -->
     <div class="hero_text" :class="{ showHero: showHero }">
       <h1>
         Julian Munguia <br />
@@ -16,53 +20,69 @@
 
   <hr />
 
-  <div class="test">
-
+  <!-- PROJECTS SECTION -->
+  <div
+    ref="projectsSection"
+    class="projects"
+    :class="{ show: showProjects }"
+  >
+    <h1>Projects</h1>
+    <ProjectsOverview />
   </div>
+
+  <div class="test"></div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Raindrops from '@/components/Raindrops.vue'
+import ProjectsOverview from '@/components/ProjectsOverview.vue'
 
 const homeSection = ref(null)
-const isVisible = ref(false)
+const projectsSection = ref(null)
+
+const showHome = ref(false)
 const showHero = ref(false)
+const showProjects = ref(false)
 
 let observer
 
 onMounted(() => {
   observer = new IntersectionObserver(
-    ([entry]) => {
-      isVisible.value = entry.isIntersecting
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.target === homeSection.value) {
+          showHome.value = entry.isIntersecting
 
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          showHero.value = true
-        }, 300)
-      } else {
-        showHero.value = false
-      }
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              showHero.value = true
+            }, 300)
+          } else {
+            showHero.value = false
+          }
+        }
+
+        if (entry.target === projectsSection.value) {
+          showProjects.value = entry.isIntersecting
+        }
+      })
     },
-    {
-      threshold: 0.3,
-    }
+    { threshold: 0.3 }
   )
 
-  if (homeSection.value) {
-    observer.observe(homeSection.value)
-  }
+  homeSection.value && observer.observe(homeSection.value)
+  projectsSection.value && observer.observe(projectsSection.value)
 })
 
 onBeforeUnmount(() => {
-  if (observer && homeSection.value) {
-    observer.unobserve(homeSection.value)
-  }
+  observer?.disconnect()
 })
 </script>
 
-
 <style scoped>
+/* ---------------- HERO ---------------- */
+
 .home {
   opacity: 0;
   transition: all 0.6s ease;
@@ -72,11 +92,11 @@ onBeforeUnmount(() => {
   position: relative;
 }
 
-.show {
+.home.show {
   opacity: 1;
 }
 
-/* TEXT CONTAINER (replaces old absolute h1 + subtitle) */
+/* TEXT OVERLAY */
 .hero_text {
   position: absolute;
   top: 45%;
@@ -84,7 +104,6 @@ onBeforeUnmount(() => {
   transform: translate(-50%, -70%);
   opacity: 0;
   transition: all 0.6s ease;
-  /*text-align: center;*/
   z-index: 2;
 }
 
@@ -93,7 +112,7 @@ onBeforeUnmount(() => {
   transform: translate(-50%, -50%);
 }
 
-h1 {
+.hero-text, h1 {
   margin: 0;
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.08;
@@ -106,14 +125,36 @@ h1 {
   opacity: 0.85;
 }
 
+/* ---------------- DIVIDER ---------------- */
+
 hr {
   width: 70%;
   border: none;
-  border-top: 2px solid rgba(255,255,255,0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
   margin: 3rem auto;
 }
 
-.test{
-  height: 200vh
+/* ---------------- PROJECTS ---------------- */
+
+.projects {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.projects.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects, h1{
+  margin-bottom: 1vh;
+  
+}
+
+/* ---------------- SPACER ---------------- */
+
+.test {
+  height: 200vh;
 }
 </style>
