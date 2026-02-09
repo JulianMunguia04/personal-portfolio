@@ -149,7 +149,6 @@ hr {
 
 .projects, h1{
   margin-bottom: 1vh;
-  
 }
 
 /* ---------------- SPACER ---------------- */
