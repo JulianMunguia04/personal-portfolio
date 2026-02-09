@@ -22,7 +22,7 @@
   inset: 0;
   z-index: -1;
   overflow: hidden;
-  opacity: 40%;
+  opacity: 30%;
 }
 
 .video-bg video {
