@@ -88,8 +88,6 @@
       </section>
     </div>
   </div>
-
-  <div class="spacer"></div>
 </template>
 
 <script setup>
@@ -126,7 +124,10 @@ onMounted(() => {
         }
       })
     },
-    { threshold: 0.3 }
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -20% 0px'
+    }
   )
 
   homeSection.value && observer.observe(homeSection.value)
@@ -308,6 +309,7 @@ hr {
 .tech-header {
   max-width: 800px;
   margin-bottom: 3rem;
+  text-align: left;
 }
 
 .tech-subtitle {

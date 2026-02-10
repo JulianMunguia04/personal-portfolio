@@ -152,7 +152,6 @@ const techStack = [
 
 onMounted(() => {
   // Ensure content is visible immediately
-  showTech.value = true
 
   // Optional: keep IntersectionObserver if you want future scroll animations
   observer = new IntersectionObserver(
@@ -160,10 +159,11 @@ onMounted(() => {
       entries.forEach(entry => {
         if (entry.target === techSection.value) {
           showTech.value = entry.isIntersecting
+          observer.disconnect()
         }
       })
     },
-    { threshold: 0.3 }
+    { threshold: 0.1 }
   )
 
   techSection.value && observer.observe(techSection.value)
@@ -177,99 +177,99 @@ onBeforeUnmount(() => {
 <style scoped>
 /* ---------------- TECHNOLOGIES ---------------- */
 
-.tech {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
-  width: 90%;
-  margin: 4rem auto;
-  min-height: 80vh; /* ensures section appears on screen */
-}
+  .tech {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+    width: 90%;
+    margin: 4rem auto;
+    min-height: 80vh; /* ensures section appears on screen */
+  }
 
-.tech.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .tech.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-.tech-header {
-  max-width: 800px;
-  margin-bottom: 3rem;
-}
+  .tech-header {
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
 
-.tech-subtitle {
-  font-size: 1.15rem;
-  opacity: 0.8;
-}
+  .tech-subtitle {
+    font-size: 1.15rem;
+    opacity: 0.8;
+  }
 
-.tech-groups {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
+  .tech-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
 
-.group-title {
-  font-size: 1.9rem;
-}
+  .group-title {
+    font-size: 1.9rem;
+  }
 
-.group-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.6rem;
-  padding: 0.3rem 0.55rem;
-  border-radius: 8px;
-  opacity: 1;
-}
+  .group-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.6rem;
+    padding: 0.3rem 0.55rem;
+    border-radius: 8px;
+    opacity: 1;
+  }
 
-.tech-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
+  .tech-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
 
-.tech-card {
-  border: 1px solid #fff;
-  border-radius: 12px;
-  padding: 5%;
-  background: radial-gradient(circle at top, #151515, #0f0f0f);
-  transition: transform 0.25s ease, background 0.25s ease;
-}
+  .tech-card {
+    border: 1px solid #fff;
+    border-radius: 12px;
+    padding: 5%;
+    background: radial-gradient(circle at top, #151515, #0f0f0f);
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
 
-.tech-card:hover {
-  transform: translateY(-4px);
-  background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
-}
+  .tech-card:hover {
+    transform: translateY(-4px);
+    background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
+  }
 
-.tech-header-row {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 0.4rem;
-}
+  .tech-header-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
 
-.tech-logo {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  border: 1px solid #fff;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .tech-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.tech-logo img {
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
-}
+  .tech-logo img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+  }
 
-.tech-name {
-  font-size: 1.1rem;
-}
+  .tech-name {
+    font-size: 1.1rem;
+  }
 
-.tech-desc {
-  font-size: 0.95rem;
-  opacity: 1;
-}
+  .tech-desc {
+    font-size: 0.95rem;
+    opacity: 1;
+  }
 </style>
