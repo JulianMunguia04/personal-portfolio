@@ -11,7 +11,7 @@ const show_filters = ref(false)
 onMounted(async () => {
   try {
     const res = await fetch(`${import.meta.env.VITE_EXPRESS_API_URL}/api/projects`)
-    console.log(`${import.meta.env.EXPRESS_API_URL}/api/projects`)
+    console.log(`${import.meta.env.VITE_EXPRESS_API_URL}/api/projects`)
     const data = await res.json()
 
     projects.value = data
