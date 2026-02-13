@@ -1,75 +1,32 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 
-const projects = ref([
-  {
-    id: 1,
-    name: "LadLadder",
-    shortDescription:
-      "Full-stack real-time multiplayer game using Node.js, Socket.IO, and MongoDB with live rooms, scoring logic, and consensus-based gameplay.",
-    photoLink: "/project-previews/ladladder-preview.png",
-    technologies: [
-        "javascript",
-        "html",
-        "css",
-        "node",
-        "express",
-        "socketio",
-        "mongodb",
-        "mongoose",
-        "ejs",
-        "aws",
-        "pm2"
-    ]
-  },
-  {
-    id: 2,
-    name: "MinesweeperVs",
-    shortDescription:
-        "Real-time competitive multiplayer Minesweeper built with Next.js and Socket.IO. Features live matchmaking, power-ups, ELO rankings, friend challenges, and low-latency gameplay powered by Redis and PostgreSQL.",
-    photoLink: "/project-previews/minesweepervs-preview.png",
-    technologies: [
-        "javascript",
-        "typescript",
-        "react",
-        "nextjs",
-        "node",
-        "socketio",
-        "postgresql",
-        "redis",
-        "docker"
-    ]
-  },
-  {
-    id: 3,
-    name: "Music Transcriber",
-    shortDescription:
-        "Transformer-based deep learning model that converts WAV audio into precise MIDI sequences. Scalable training on MAESTRO dataset enables professional-quality music transcription for musicians, producers, and developers.",
-    photoLink: "/project-previews/music-transcriber-preview.png",
-    technologies: [
-        "python",
-        "tensorflow",
-        "keras",
-        "numpy",
-        "librosa",
-        "midi",
-        "jupyter",
-        "git"
-    ]
-  }
-])
+const projects = ref([])
 
 const search_query = ref('')
 const selected_technologies = ref([])
 const technologies = ref([])
 const show_filters = ref(false)
 
-onMounted(() => {
-  const tech_set = new Set()
-  projects.value.forEach(p =>
-    p.technologies.forEach(t => tech_set.add(t))
-  )
-  technologies.value = Array.from(tech_set)
+onMounted(async () => {
+  try {
+    const res = await fetch(`${import.meta.env.VITE_EXPRESS_API_URL}/api/projects`)
+    console.log(`${import.meta.env.EXPRESS_API_URL}/api/projects`)
+    const data = await res.json()
+
+    projects.value = data
+
+    // rebuild technology list dynamically
+    const tech_set = new Set()
+    projects.value.forEach(p =>
+      p.technologies.forEach(t => tech_set.add(t))
+    )
+
+    technologies.value = Array.from(tech_set)
+
+  } catch (err) {
+    console.error("Failed to load projects:", err)
+  }
 })
 
 const filtered_projects = computed(() => {
