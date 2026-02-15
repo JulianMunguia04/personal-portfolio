@@ -174,89 +174,184 @@ onBeforeUnmount(() => {
 /* ---- scalable tech stack ---- */
 const techStack = [
   {
-    id: 'frontend',
-    icon: '💻',
-    title: 'Frontend',
-    description: 'Building responsive, accessible, and interactive user interfaces.',
+    id: 'languages',
+    icon: '🧑‍💻',
+    title: 'Programming Languages',
+    description: 'Strong foundations in typed and untyped languages across backend, frontend, and machine learning systems.',
     items: [
-      {
-        name: 'React',
-        description: 'Component-based UI development with hooks and state management.',
-        logo: '/tech-logos/react.png'
+      { name: 'JavaScript', 
+        description: 'Core language for full-stack web development and real-time systems.',
+        logo: "/tech-logos/javascript.png"
       },
-      {
-        name: 'Vue 3',
-        description: 'Composition API, Single File Components, and transitions.',
-        logo: '/tech-logos/vue.png'
+      { name: 'TypeScript',
+        description: 'Type-safe application architecture for scalable frontend and backend systems.',
+        logo: "/tech-logos/typescript.png"
       },
-      { name: 'TypeScript', 
-        description: 'Type-safe JavaScript for scalable applications.',
-        logo: '/tech-logos/typescript.png'
+      { name: 'Python',
+        description: 'Backend services and machine learning model development.',
+        logo: "/tech-logos/python.png"
+      },
+      { name: 'Go',
+        description: 'Systems-level programming and concurrent backend services.',
+        logo: "/tech-logos/go.png"
+      },
+      { name: 'Java',
+        description: 'Object-oriented programming and academic system design.',
+        logo: "/tech-logos/java.png"
+      },
+      { name: 'PHP',
+        description: 'Backend development for LMS systems and WordPress integrations.',
+        logo: "/tech-logos/php.png"
+      },
+      { name: 'C / C#',
+        description: 'Low-level systems understanding and object-oriented development.',
+        logo: "/tech-logos/c.png"
+      }
+    ]
+  },
+  {
+    id: 'frontend',
+    icon: '🎨',
+    title: 'Frontend Engineering',
+    description: 'Building modern, responsive, and production-grade user interfaces.',
+    items: [
+      { name: 'React.js',
+        description: 'Production applications using hooks, state management, and scalable component architecture.',
+        logo: "/tech-logos/react.png"
+      },
+      { name: 'Next.js', 
+        description: 'Server-side rendering, routing, and full-stack React frameworks.',
+        logo: "/tech-logos/next.png"
+      },
+      { name: 'Vue.js', 
+        description: 'Component-driven UI development using Composition API.', 
+        logo: "/tech-logos/vue.png"
+      },
+      { name: 'HTML5 & Semantic HTML',
+        description: 'Accessible, SEO-friendly markup structure.',
+        logo: "/tech-logos/html.png"
+      },
+      { name: 'CSS3', 
+        description: 'Responsive layouts, animations, scroll effects, and modern UI styling.',
+        logo: "/tech-logos/css.png" 
+      },
+      { name: 'Tailwind', 
+        description: 'utility-first CSS framework for rapidly building custom user interfaces directly in your HTML.', 
+        logo: "/tech-logos/tailwind.png"
+      },
+      { name: 'Bootstrap', 
+        description: 'Rapid UI prototyping and responsive design systems.',
+        logo: "/tech-logos/bootstrap.png"
+      },
+      { name: 'Wordpress', 
+        description: 'A full-stack WordPress Developer building high-performance, custom websites that drive business results',
+        logo: "/tech-logos/wordpress.png"
       },
     ]
   },
   {
     id: 'backend',
-    icon: '🧠',
+    icon: '⚙️',
     title: 'Backend & APIs',
-    description: 'Designing reliable APIs and real-time backend systems.',
+    description: 'Designing secure, scalable, and real-time backend systems.',
     items: [
-      { name: 'Node.js', description: 'REST APIs and real-time servers.' },
-      { name: 'Socket.IO', description: 'Live multiplayer and real-time communication.' }
+      { name: 'Node.js', 
+        description: 'RESTful APIs and real-time server architecture.', 
+        logo: "/tech-logos/node.png"
+      },
+      { name: 'Express.js', 
+        description: 'Middleware-based backend application framework.', 
+        logo: "/tech-logos/express.png"
+      },
+      { name: 'Nest.js', 
+        description: 'Modular, enterprise-grade Node.js backend framework.', 
+        logo: "/tech-logos/nest.png"
+      },
+      { name: 'Django', 
+        description: 'High-level Python framework enabling rapid, secure web development.', 
+        logo: "/tech-logos/django.png"
+      },
+      { name: 'WebSockets / Socket.io', 
+        description: 'Low-latency multiplayer and real-time communication systems.', 
+        logo: "/tech-logos/socketio.svg"
+      },
+      { name: 'REST APIs', 
+        description: 'Structured API design and CRUD operations.', 
+        logo: "/tech-logos/restapi.png"
+      },
+      { name: 'Authentication (OAuth2, JWT, Sessions)', 
+        description: 'Secure user authentication and session management.', 
+        logo: "/tech-logos/auth.svg"
+      }
     ]
   },
   {
     id: 'databases',
     icon: '🗄️',
-    title: 'Databases',
-    description: 'Designing schemas, managing data, and optimizing queries for scale.',
+    title: 'Databases & Caching',
+    description: 'Designing schemas, optimizing queries, and managing persistent data at scale.',
     items: [
-      { name: 'MongoDB', description: 'NoSQL document database for scalable, real-time applications.' },
-      { name: 'SQLite', description: 'Lightweight relational database for rapid prototyping and local apps.' },
-      { name: 'PostgreSQL', description: 'Relational database with strong consistency and advanced querying.' }
+      { name: 'PostgreSQL', description: 'Relational database design and advanced querying.' },
+      { name: 'MySQL', description: 'Production database management and indexing.' },
+      { name: 'MongoDB', description: 'NoSQL document modeling for scalable applications.' },
+      { name: 'Redis', description: 'Caching, session storage, and performance optimization.' },
+      { name: 'SQLite', description: 'Lightweight database solutions for local and rapid deployments.' },
+      { name: 'Mongoose', description: 'Schema modeling and data validation for MongoDB.' }
     ]
   },
   {
     id: 'cloud',
     icon: '☁️',
     title: 'Cloud & Deployment',
-    description: 'Deploying, hosting, and maintaining production-ready applications.',
+    description: 'Deploying and maintaining production applications in cloud environments.',
     items: [
-      { name: 'AWS', description: 'Hosting backend services, databases, and static assets.' },
-      { name: 'Vercel', description: 'Frontend deployments with CI/CD and edge performance.' },
-      { name: 'Netlify', description: 'Static site hosting with serverless functions.' }
+      { name: 'AWS (EC2, S3)', description: 'Cloud infrastructure, compute instances, and object storage.' },
+      { name: 'Docker', description: 'Containerized application deployment.' },
+      { name: 'Kubernetes', description: 'Container orchestration and scaling.' },
+      { name: 'Firebase', description: 'Backend-as-a-Service and real-time database solutions.' },
+      { name: 'Render', description: 'Cloud deployment for full-stack applications.' },
+      { name: 'PM2', description: 'Node.js process management and production uptime.' },
+      { name: 'GitHub Pages', description: 'Static site deployment and CI workflows.' }
     ]
   },
   {
-    id: 'devops',
-    icon: '⚙️',
-    title: 'DevOps & Tooling',
-    description: 'Tools and workflows that keep projects maintainable and scalable.',
-    items: [
-      { name: 'Git & GitHub', description: 'Version control, collaboration, and pull request workflows.' },
-      { name: 'Docker', description: 'Containerizing applications for consistent environments.' },
-      { name: 'CI/CD', description: 'Automated testing and deployment pipelines.' }
-    ]
-  },
-  {
-    id: 'ml',
+    id: 'machine-learning',
     icon: '🤖',
     title: 'Machine Learning & AI',
-    description: 'Building and training intelligent systems using data-driven models.',
+    description: 'Building and training deep learning systems for real-world applications.',
     items: [
-      { name: 'Python', description: 'Primary language for data processing and ML workflows.' },
-      { name: 'TensorFlow / Keras', description: 'Training deep learning models for audio and data analysis.' },
-      { name: 'NumPy & Pandas', description: 'Numerical computing and data manipulation.' }
+      { name: 'TensorFlow / Keras', description: 'Training neural networks and transformer-based architectures.' },
+      { name: 'Scikit-Learn', description: 'Classical machine learning algorithms and evaluation.' },
+      { name: 'NumPy & Pandas', description: 'Data processing and numerical computing.' },
+      { name: 'Matplotlib', description: 'Data visualization and analysis.' },
+      { name: 'Jupyter Notebook', description: 'Experimentation and ML prototyping workflows.' }
     ]
   },
   {
-    id: 'testing',
-    icon: '🧪',
-    title: 'Testing & Quality',
-    description: 'Ensuring correctness, reliability, and maintainability.',
+    id: 'tools',
+    icon: '🛠️',
+    title: 'Engineering Tools & Workflow',
+    description: 'Professional development tools and collaborative workflows.',
     items: [
-      { name: 'Jest', description: 'Unit and integration testing for JavaScript applications.' },
-      { name: 'Playwright', description: 'End-to-end testing for real user workflows.' }
+      { name: 'Git & GitHub', description: 'Version control, pull requests, and collaborative development.' },
+      { name: 'CI/CD Pipelines', description: 'Automated testing and deployment workflows.' },
+      { name: 'Linux / Bash', description: 'Server environments and command-line proficiency.' },
+      { name: 'VMware & VirtualBox', description: 'Virtualized environments for development and cybersecurity labs.' },
+      { name: 'Kali Linux', description: 'Security testing and network analysis environments.' },
+      { name: 'Figma', description: 'UI/UX design and prototyping.' }
+    ]
+  },
+  {
+    id: 'computer-science',
+    icon: '📚',
+    title: 'Computer Science Foundations',
+    description: 'Strong theoretical foundation supporting scalable and optimized systems.',
+    items: [
+      { name: 'Data Structures & Algorithms', description: 'Complexity analysis and optimized problem solving.' },
+      { name: 'Big-O Notation', description: 'Performance analysis of algorithms.' },
+      { name: 'Operating Systems', description: 'Memory, concurrency, and system-level concepts.' },
+      { name: 'Networking & Security', description: 'Protocols, encryption, and cybersecurity fundamentals.' },
+      { name: 'Linear Algebra & Statistics', description: 'Mathematical foundations for machine learning.' }
     ]
   }
 ]
