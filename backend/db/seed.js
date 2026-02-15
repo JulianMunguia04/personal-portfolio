@@ -51,7 +51,27 @@ const projects = [
       "python","tensorflow","keras","numpy",
       "librosa","midi","jupyter","git"
     ]
-  }
+  },
+  {
+  id: 4, // next unique ID
+  name: "Personal Portfolio",
+  shortDescription:
+    "A modern personal portfolio built with Vite, Vue, and Express, hosted on Render with CI/CD. Showcases projects, technologies, and interactive features.",
+  photoLink: "/project-previews/portfolio-preview.png",
+  technologies: [
+    "javascript",
+    "typescript",
+    "vue",
+    "vite",
+    "node",
+    "express",
+    "npm",
+    "html",
+    "css",
+    "render",
+    "ci/cd"
+  ]
+}
 ];
 
 const insert = db.prepare(`
