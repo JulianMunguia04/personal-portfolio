@@ -82,7 +82,7 @@ const education = ref([
       "Software Engineering",
       "Operating Systems",
     ],
-    photoLink: "https://via.placeholder.com/80", // add your actual photo URL
+    photoLink: "/concordia-logo.png",
   },
 ]);
 
@@ -92,12 +92,7 @@ const certificates = ref([
     organization: "Amazon Web Services",
     year: "In Progress",
     notes: ["Independent study and cloud practice"],
-    photoLink: "https://via.placeholder.com/80",
-  },
-  {
-    title: "AI & Machine Learning Exploration",
-    notes: ["Independent projects and research"],
-    photoLink: "https://via.placeholder.com/80",
+    photoLink: "/aws-cloud.png",
   },
 ]);
 
@@ -177,6 +172,7 @@ onBeforeUnmount(() => {
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid #fff;
+  background-color: rgb(217, 217, 217);
 }
 
 .meta {
