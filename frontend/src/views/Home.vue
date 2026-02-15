@@ -88,16 +88,29 @@
       </section>
     </div>
   </div>
+
+  <hr />
+
+  <div
+    ref="experiencePreview"
+    class="experience-preview"
+    :class="{ show: showExperiencePreview }"
+  >
+    <ExperiencePreview/>
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Raindrops from '@/components/Raindrops.vue'
 import ProjectsOverview from '@/components/ProjectsOverview.vue'
+import ExperiencePreview from '../components/ExperiencePreview.vue'
 
 const homeSection = ref(null)
 const projectsSection = ref(null)
 const techSection = ref(null)
+const experiencePreview = ref(null)
+const showExperiencePreview = ref(false)
 
 const showHome = ref(false)
 const showHero = ref(false)
@@ -122,6 +135,9 @@ onMounted(() => {
         if (entry.target === techSection.value) {
           showTech.value = entry.isIntersecting
         }
+        if (entry.target === experiencePreview.value) {
+          showExperiencePreview.value = entry.isIntersecting
+        }
       })
     },
     {
@@ -133,6 +149,7 @@ onMounted(() => {
   homeSection.value && observer.observe(homeSection.value)
   projectsSection.value && observer.observe(projectsSection.value)
   techSection.value && observer.observe(techSection.value)
+  experiencePreview.value && observer.observe(experiencePreview.value)
 })
 
 onBeforeUnmount(() => {
@@ -393,5 +410,21 @@ hr {
 
 .spacer {
   height: 200vh;
+}
+
+/* ---------------- EXPERIENCE PREVIEW ---------------- */
+
+.experience-preview {
+  width: 90%;
+  margin: 5rem auto;          /* spacing above & below */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+/* show animation */
+.experience-preview.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>
