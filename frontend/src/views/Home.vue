@@ -98,6 +98,19 @@
   >
     <ExperiencePreview/>
   </div>
+
+   <hr />
+
+  <div class="credentials-preview">
+    <Credentials />
+  </div>
+
+  <hr />
+
+  <div>
+    <Contact/>
+  </div>
+
 </template>
 
 <script setup>
@@ -105,6 +118,8 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Raindrops from '@/components/Raindrops.vue'
 import ProjectsOverview from '@/components/ProjectsOverview.vue'
 import ExperiencePreview from '../components/ExperiencePreview.vue'
+import Credentials from "@/components/CredentialsPreview.vue";
+import Contact from "@/components/ContactPreview.vue";
 
 const homeSection = ref(null)
 const projectsSection = ref(null)
@@ -426,5 +441,9 @@ hr {
 .experience-preview.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.credentials-preview {
+  margin-top: 4rem;
 }
 </style>

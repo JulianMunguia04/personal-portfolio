@@ -188,7 +188,6 @@ const leadership = [
   width: 90%;
   margin: 0 0 6rem 0;
   padding-left: 5%;
-  padding-bottom: 5%;
 }
 
 .experience.show {
