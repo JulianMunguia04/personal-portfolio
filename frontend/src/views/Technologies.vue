@@ -180,12 +180,26 @@ const techStack = [
     title: 'Databases & Caching',
     description: 'Designing schemas, optimizing queries, and managing persistent data at scale.',
     items: [
-      { name: 'PostgreSQL', description: 'Relational database design and advanced querying.' },
-      { name: 'MySQL', description: 'Production database management and indexing.' },
-      { name: 'MongoDB', description: 'NoSQL document modeling for scalable applications.' },
-      { name: 'Redis', description: 'Caching, session storage, and performance optimization.' },
-      { name: 'SQLite', description: 'Lightweight database solutions for local and rapid deployments.' },
-      { name: 'Mongoose', description: 'Schema modeling and data validation for MongoDB.' }
+      { name: 'PostgreSQL', 
+        description: 'Relational database design and advanced querying.', 
+        logo: "/tech-logos/postgresql.png"
+      },
+      { name: 'MySQL', 
+        description: 'Production database management and indexing.', 
+        logo: "/tech-logos/mysql.png"
+      },
+      { name: 'MongoDB', 
+        description: 'NoSQL document modeling for scalable applications.', 
+        logo: "/tech-logos/mongodb.png"
+      },
+      { name: 'Redis', 
+        description: 'Caching, session storage, and performance optimization.', 
+        logo: "/tech-logos/redis.svg"
+      },
+      { name: 'SQLite', 
+        description: 'Lightweight database solutions for local and rapid deployments.', 
+        logo: "/tech-logos/sqlite.jpg"
+      },
     ]
   },
   {
