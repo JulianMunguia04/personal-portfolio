@@ -56,6 +56,9 @@
 ![Contact](./screenshots/contact.png)
 
 ---
+## 🔗 Live Demo
+
+🌍 https://jmportfolio.onrender.com
 
 ## 🛠️ Local Setup
 
