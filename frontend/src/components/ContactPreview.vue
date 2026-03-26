@@ -69,7 +69,7 @@ const contact = ref({
   location: "Edmonton, Canada",
   links: [
     { name: "GitHub", url: "https://github.com/julianmunguia" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/julianmunguia" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/julian-munguia" },
   ],
   notes:
     "I’m open to remote or local projects, collaborations, and mentorship opportunities. Let’s build something awesome together!",
