@@ -214,7 +214,8 @@ const techStack = [
       { name: 'Firebase', description: 'Backend-as-a-Service and real-time database solutions.' },
       { name: 'Render', description: 'Cloud deployment for full-stack applications.' },
       { name: 'PM2', description: 'Node.js process management and production uptime.' },
-      { name: 'GitHub Pages', description: 'Static site deployment and CI workflows.' }
+      { name: 'GitHub Pages', description: 'Static site deployment and CI workflows.' },
+      { name: 'Prometheus', description: 'Monitoring, metrics collection, and alerting for distributed systems and microservices.' }
     ]
   },
   {
