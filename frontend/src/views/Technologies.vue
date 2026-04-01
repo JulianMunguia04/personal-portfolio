@@ -208,14 +208,38 @@ const techStack = [
     title: 'Cloud & Deployment',
     description: 'Deploying and maintaining production applications in cloud environments.',
     items: [
-      { name: 'AWS (EC2, S3)', description: 'Cloud infrastructure, compute instances, and object storage.' },
-      { name: 'Docker', description: 'Containerized application deployment.' },
-      { name: 'Kubernetes', description: 'Container orchestration and scaling.' },
-      { name: 'Firebase', description: 'Backend-as-a-Service and real-time database solutions.' },
-      { name: 'Render', description: 'Cloud deployment for full-stack applications.' },
-      { name: 'PM2', description: 'Node.js process management and production uptime.' },
-      { name: 'GitHub Pages', description: 'Static site deployment and CI workflows.' },
-      { name: 'Prometheus', description: 'Monitoring, metrics collection, and alerting for distributed systems and microservices.' }
+      { name: 'AWS (EC2, S3)', 
+        description: 'Cloud infrastructure, compute instances, and object storage.',
+        logo: "/tech-logos/aws.svg"
+      },
+      { name: 'Docker', 
+        description: 'Containerized application deployment.',
+        logo: "/tech-logos/docker.png"
+      },
+      { name: 'Kubernetes', 
+        description: 'Container orchestration and scaling.',
+        logo: "/tech-logos/kubernetes.png"
+      },
+      { name: 'Firebase', 
+        description: 'Backend-as-a-Service and real-time database solutions.',
+        logo: "/tech-logos/firebase.png"
+      },
+      { name: 'Render', 
+        description: 'Cloud deployment for full-stack applications.',
+        logo: "/tech-logos/render.png"
+      },
+      { name: 'PM2', 
+        description: 'Node.js process management and production uptime.',
+        logo: "/tech-logos/pm2.png"
+      },
+      { name: 'GitHub Pages', 
+        description: 'Static site deployment and CI workflows.',
+        logo: "/tech-logos/github-pages.png"
+      },
+      { name: 'Prometheus', 
+        description: 'Monitoring, metrics collection, and alerting for distributed systems and microservices.',
+        logo: "/tech-logos/prometheus.png"
+      },
     ]
   },
   {
@@ -358,8 +382,8 @@ onBeforeUnmount(() => {
   }
 
   .tech-logo {
-    width: 28px;
-    height: 28px;
+    width: 50px;
+    height: 50px;
     border-radius: 6px;
     border: 1px solid #fff;
     background: #fff;
