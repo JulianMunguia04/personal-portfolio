@@ -319,13 +319,38 @@ const techStack = [
     title: 'Cloud & Deployment',
     description: 'Deploying and maintaining production applications in cloud environments.',
     items: [
-      { name: 'AWS (EC2, S3)', description: 'Cloud infrastructure, compute instances, and object storage.' },
-      { name: 'Docker', description: 'Containerized application deployment.' },
-      { name: 'Kubernetes', description: 'Container orchestration and scaling.' },
-      { name: 'Firebase', description: 'Backend-as-a-Service and real-time database solutions.' },
-      { name: 'Render', description: 'Cloud deployment for full-stack applications.' },
-      { name: 'PM2', description: 'Node.js process management and production uptime.' },
-      { name: 'GitHub Pages', description: 'Static site deployment and CI workflows.' }
+      { name: 'AWS (EC2, S3)', 
+        description: 'Cloud infrastructure, compute instances, and object storage.',
+        logo: "/tech-logos/aws.svg"
+      },
+      { name: 'Docker', 
+        description: 'Containerized application deployment.',
+        logo: "/tech-logos/docker.png"
+      },
+      { name: 'Kubernetes', 
+        description: 'Container orchestration and scaling.',
+        logo: "/tech-logos/kubernetes.png"
+      },
+      { name: 'Firebase', 
+        description: 'Backend-as-a-Service and real-time database solutions.',
+        logo: "/tech-logos/firebase.png"
+      },
+      { name: 'Render', 
+        description: 'Cloud deployment for full-stack applications.',
+        logo: "/tech-logos/render.png"
+      },
+      { name: 'PM2', 
+        description: 'Node.js process management and production uptime.',
+        logo: "/tech-logos/pm2.png"
+      },
+      { name: 'GitHub Pages', 
+        description: 'Static site deployment and CI workflows.',
+        logo: "/tech-logos/github-pages.png"
+      },
+      { name: 'Prometheus', 
+        description: 'Monitoring, metrics collection, and alerting for distributed systems and microservices.',
+        logo: "/tech-logos/prometheus.png"
+      },
     ]
   },
   {
@@ -334,11 +359,22 @@ const techStack = [
     title: 'Machine Learning & AI',
     description: 'Building and training deep learning systems for real-world applications.',
     items: [
-      { name: 'TensorFlow / Keras', description: 'Training neural networks and transformer-based architectures.' },
-      { name: 'Scikit-Learn', description: 'Classical machine learning algorithms and evaluation.' },
-      { name: 'NumPy & Pandas', description: 'Data processing and numerical computing.' },
-      { name: 'Matplotlib', description: 'Data visualization and analysis.' },
-      { name: 'Jupyter Notebook', description: 'Experimentation and ML prototyping workflows.' }
+      { name: 'TensorFlow / Keras', 
+        description: 'Training neural networks and transformer-based architectures.',
+        logo: "/tech-logos/tensorflow.jpg"
+      },
+      { name: 'Scikit-Learn', description: 'Classical machine learning algorithms and evaluation.',
+        logo: "/tech-logos/scikit-learn.png"
+      },
+      { name: 'NumPy & Pandas', description: 'Data processing and numerical computing.',
+        logo: "/tech-logos/numpy.png"
+      },
+      { name: 'Matplotlib', description: 'Data visualization and analysis.',
+        logo: "/tech-logos/matplotlib.png"
+      },
+      { name: 'Jupyter Notebook', description: 'Experimentation and ML prototyping workflows.',
+        logo: "/tech-logos/jupyter-notebook.png"
+      },
     ]
   },
   {
@@ -505,8 +541,8 @@ hr {
 }
 
 .tech-logo {
-  width: 28px;
-  height: 28px;
+  width: 50px;
+  height: 50px;
   border-radius: 6px;
   border: 1px solid #fff;
   background: #fff;

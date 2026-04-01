@@ -248,11 +248,22 @@ const techStack = [
     title: 'Machine Learning & AI',
     description: 'Building and training deep learning systems for real-world applications.',
     items: [
-      { name: 'TensorFlow / Keras', description: 'Training neural networks and transformer-based architectures.' },
-      { name: 'Scikit-Learn', description: 'Classical machine learning algorithms and evaluation.' },
-      { name: 'NumPy & Pandas', description: 'Data processing and numerical computing.' },
-      { name: 'Matplotlib', description: 'Data visualization and analysis.' },
-      { name: 'Jupyter Notebook', description: 'Experimentation and ML prototyping workflows.' }
+      { name: 'TensorFlow / Keras', 
+        description: 'Training neural networks and transformer-based architectures.',
+        logo: "/tech-logos/tensorflow.jpg"
+      },
+      { name: 'Scikit-Learn', description: 'Classical machine learning algorithms and evaluation.',
+        logo: "/tech-logos/scikit-learn.png"
+      },
+      { name: 'NumPy & Pandas', description: 'Data processing and numerical computing.',
+        logo: "/tech-logos/numpy.png"
+      },
+      { name: 'Matplotlib', description: 'Data visualization and analysis.',
+        logo: "/tech-logos/matplotlib.png"
+      },
+      { name: 'Jupyter Notebook', description: 'Experimentation and ML prototyping workflows.',
+        logo: "/tech-logos/jupyter-notebook.png"
+      },
     ]
   },
   {
