@@ -298,11 +298,21 @@ const techStack = [
     title: 'Computer Science Foundations',
     description: 'Strong theoretical foundation supporting scalable and optimized systems.',
     items: [
-      { name: 'Data Structures & Algorithms', description: 'Complexity analysis and optimized problem solving.' },
-      { name: 'Big-O Notation', description: 'Performance analysis of algorithms.' },
-      { name: 'Operating Systems', description: 'Memory, concurrency, and system-level concepts.' },
-      { name: 'Networking & Security', description: 'Protocols, encryption, and cybersecurity fundamentals.' },
-      { name: 'Linear Algebra & Statistics', description: 'Mathematical foundations for machine learning.' }
+      { name: 'Data Structures & Algorithms', description: 'Complexity analysis and optimized problem solving.',
+        logo: "/tech-logos/DSA.png"
+      },
+      { name: 'Big-O Notation', description: 'Performance analysis of algorithms.',
+        logo: "/tech-logos/bigO.jpg"
+      },
+      { name: 'Operating Systems', description: 'Memory, concurrency, and system-level concepts.',
+        logo: "/tech-logos/OS.jpg"
+      },
+      { name: 'Networking & Security', description: 'Protocols, encryption, and cybersecurity fundamentals.',
+        logo: "/tech-logos/networking.webp"
+      },
+      { name: 'Linear Algebra & Statistics', description: 'Mathematical foundations for machine learning.',
+        logo: "/tech-logos/linear-algebra.png"
+      },
     ]
   }
 ]
