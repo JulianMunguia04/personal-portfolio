@@ -383,12 +383,24 @@ const techStack = [
     title: 'Engineering Tools & Workflow',
     description: 'Professional development tools and collaborative workflows.',
     items: [
-      { name: 'Git & GitHub', description: 'Version control, pull requests, and collaborative development.' },
-      { name: 'CI/CD Pipelines', description: 'Automated testing and deployment workflows.' },
-      { name: 'Linux / Bash', description: 'Server environments and command-line proficiency.' },
-      { name: 'VMware & VirtualBox', description: 'Virtualized environments for development and cybersecurity labs.' },
-      { name: 'Kali Linux', description: 'Security testing and network analysis environments.' },
-      { name: 'Figma', description: 'UI/UX design and prototyping.' }
+      { name: 'Git & GitHub', description: 'Version control, pull requests, and collaborative development.',
+        logo: "/tech-logos/git.png"
+      },
+      { name: 'CI/CD Pipelines', description: 'Automated testing and deployment workflows.',
+        logo: "/tech-logos/CICD.webp"
+      },
+      { name: 'Linux / Bash', description: 'Server environments and command-line proficiency.',
+        logo: "/tech-logos/linux.webp"
+      },
+      { name: 'VMware & VirtualBox', description: 'Virtualized environments for development and cybersecurity labs.',
+        logo: "/tech-logos/vmware.png"
+      },
+      { name: 'Kali Linux', description: 'Security testing and network analysis environments.',
+        logo: "/tech-logos/kali-linux.png"
+      },
+      { name: 'Figma', description: 'UI/UX design and prototyping.',
+        logo: "/tech-logos/figma.svg"
+      },
     ]
   },
   {
