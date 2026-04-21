@@ -1,4 +1,4 @@
-# Personal Portfolio
+# 👤 Personal Portfolio
 
 **Personal Portfolio** is a full-stack web application showcasing my projects, experience, technical skills, and credentials. Built with a modern Vue + Vite frontend and a Node.js + Express backend, the site is production-ready with SQLite, deployed on Render, and supported by an automated CI/CD pipeline for continuous integration and deployment.
 
