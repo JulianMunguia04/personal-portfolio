@@ -43,7 +43,7 @@ My **Personal Portfolio** is a full-stack web application showcasing my projects
 ### Projects
 ![Projects](./screenshots/projects.png)
 
-### Technologies
+### Technologies and Tools
 ![Technologies](./screenshots/technologies.png)
 
 ### Experience
